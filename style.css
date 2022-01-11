@@ -1,0 +1,91 @@
+*{ 
+    box-sizing:border-box;
+}
+
+body{
+    margin:0;
+    padding:0;
+    background-color: rgb(199, 154, 241);
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.container{
+    width:500px;
+    height:500px;
+    background-color: rgb(238, 146, 118);
+    border-radius: 50%;
+    border:15px solid rgb(152, 128, 240);
+    position: relative;
+    overflow:hidden;
+    transition: 5s;
+}
+
+.container div{
+    height: 50%;
+    width: 200px;
+    position: absolute; 
+    clip-path: polygon(100% 0, 50% 100% , 0 0 );
+    transform:translate(-50%);
+    transform-origin: bottom;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    font-weight: bold;
+    font-family: sans-serif;
+    color: black;
+    left: 135px;
+}
+
+.container .one{
+    background-color: rgb(241, 59, 135);
+    transform: rotate(120deg);
+}
+.container .two{
+    background-color: rgb(132, 245, 142);
+    transform: rotate(240deg);
+}
+.container .three{
+    background-color: rgb(8, 207, 233);
+    transform: rotate(360deg);
+}
+
+.arrow{
+    position:absolute;
+    top:10px;
+    left:50%;
+    transform: translate(-50%);
+    color: plum;
+}
+
+.arrow::before{
+    content:"\1F817";
+    font-size: 50px;
+
+}
+#spin{
+    position: absolute;
+    top: 38%;
+    left:50%;
+    transform:translate(-50%,50%);
+    z-index: 10;
+    background-color:rosybrown;
+    text-transform: uppercase;
+    border:8px solid rosybrown;
+    font-weight: bold;
+   font-size: 20px;
+    color: silver;
+    width: 80px;
+    height: 80px;
+    font-family: sans-serif;
+    border-radius: 50%;
+    cursor: pointer;
+    outline: none;
+    letter-spacing: 1px;
+}
+
